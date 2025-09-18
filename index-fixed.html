@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة راحة للعمالة المنزلية</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; direction: rtl; background: #f8f9fa; }
+        .header { background: linear-gradient(135deg, #1a472a, #4a9960); color: white; padding: 20px 0; text-align: center; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .hero { background: linear-gradient(rgba(26,71,42,0.8), rgba(74,153,96,0.8)); color: white; text-align: center; padding: 60px 0; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 20px; }
+        .workers { padding: 60px 0; }
+        .workers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .worker-card { background: white; border-radius: 15px; padding: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s; }
+        .worker-card:hover { transform: translateY(-5px); }
+        .worker-image { width: 100%; height: 200px; background: linear-gradient(45deg, #4a9960, #6bb77b); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin-bottom: 15px; }
+        .worker-name { font-size: 1.3rem; color: #1a472a; margin-bottom: 10px; font-weight: bold; }
+        .worker-skills { color: #4a9960; margin-bottom: 15px; line-height: 1.5; }
+        .book-btn { background: linear-gradient(135deg, #1a472a, #4a9960); color: white; border: none; padding: 12px 24px; border-radius: 25px; font-size: 1rem; cursor: pointer; width: 100%; transition: all 0.3s; }
+        .book-btn:hover { background: linear-gradient(135deg, #4a9960, #6bb77b); transform: translateY(-2px); }
+        .services { padding: 60px 0; background: white; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
+        .service-card { background: #f8f9fa; padding: 30px; border-radius: 15px; text-align: center; }
+        .service-card h3 { color: #1a472a; margin-bottom: 15px; }
+        .footer { background: #1a472a; color: white; text-align: center; padding: 40px 0; }
+        .section-title { text-align: center; font-size: 2.5rem; color: #1a472a; margin-bottom: 20px; }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .workers-grid, .services-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>شركة راحة للعمالة المنزلية</h1>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>مرحباً بكم في شركة راحة</h1>
+            <p>نوفر لكم أفضل خدمات العمالة المنزلية المدربة والمؤهلة</p>
+        </div>
+    </section>
+
+    <section class="workers">
+        <div class="container">
+            <h2 class="section-title">العاملات المتوفرات</h2>
+            <div class="workers-grid">
+                <div class="worker-card">
+                    <div class="worker-image">صورة العاملة</div>
+                    <h3 class="worker-name">فاطمة أحمد</h3>
+                    <p class="worker-skills">خبرة في الطبخ والتنظيف ورعاية الأطفال وكبار السن</p>
+                    <button class="book-btn" onclick="book('فاطمة أحمد')">احجز الآن</button>
+                </div>
+                <div class="worker-card">
+                    <div class="worker-image">صورة العاملة</div>
+                    <h3 class="worker-name">مريم محمد</h3>
+                    <p class="worker-skills">متخصصة في رعاية الأطفال والتنظيف المنزلي</p>
+                    <button class="book-btn" onclick="book('مريم محمد')">احجز الآن</button>
+                </div>
+                <div class="worker-card">
+                    <div class="worker-image">صورة العاملة</div>
+                    <h3 class="worker-name">عائشة علي</h3>
+                    <p class="worker-skills">خبيرة في رعاية كبار السن والطبخ الصحي</p>
+                    <button class="book-btn" onclick="book('عائشة علي')">احجز الآن</button>
+                </div>
+                <div class="worker-card">
+                    <div class="worker-image">صورة العاملة</div>
+                    <h3 class="worker-name">خديجة حسن</h3>
+                    <p class="worker-skills">متخصصة في التنظيف العميق وتنظيم المنزل</p>
+                    <button class="book-btn" onclick="book('خديجة حسن')">احجز الآن</button>
+                </div>
+                <div class="worker-card">
+                    <div class="worker-image">صورة العاملة</div>
+                    <h3 class="worker-name">زينب يوسف</h3>
+                    <p class="worker-skills">خبرة شاملة في جميع أعمال المنزل</p>
+                    <button class="book-btn" onclick="book('زينب يوسف')">احجز الآن</button>
+                </div>
+                <div class="worker-card">
+                    <div class="worker-image">صورة العاملة</div>
+                    <h3 class="worker-name">أم كلثوم إبراهيم</h3>
+                    <p class="worker-skills">متخصصة في رعاية الرضع والأطفال الصغار</p>
+                    <button class="book-btn" onclick="book('أم كلثوم إبراهيم')">احجز الآن</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">خدماتنا</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>زيارات منزلية</h3>
+                    <p>4 ساعات: 49 ريال<br>6 ساعات: 70 ريال<br>8 ساعات: 99 ريال</p>
+                </div>
+                <div class="service-card">
+                    <h3>إقامة منزلية</h3>
+                    <p>30 يوم: 1200 ريال<br>90 يوم: 3500 ريال<br>6 أشهر: 7200 ريال</p>
+                </div>
+                <div class="service-card">
+                    <h3>مميزاتنا</h3>
+                    <p>عاملات مدربات<br>خدمة 24/7<br>ضمان الجودة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 شركة راحة للعمالة المنزلية</p>
+            <p>للاستفسارات: 966501234567+</p>
+        </div>
+    </footer>
+
+    <script>
+        function book(name) {
+            alert('للحجز مع ' + name + ' يرجى الاتصال على: 966501234567+');
+        }
+    </script>
+</body>
+</html>
